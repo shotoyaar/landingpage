@@ -4,7 +4,6 @@ import { HoveredLink, EmptyMenuItem, Menu, MenuItem, ProductItem } from "../comp
 import { cn } from "../components/utils";
 import React, { useState } from 'react';
 import { AnimatedHandles } from "../components/contact";
-import { m } from "framer-motion";
 import { BackgroundBeams } from "../components/backgroundBeams";
 import { FlipWords } from "../components/flipText";
 import { EvervaultCard } from "../components/borderG";
@@ -43,18 +42,6 @@ const people = [
   },
 ];
 
-const Gradient = () => {
-  return (
-    <path
-      d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-      stroke="currentColor"
-      strokeWidth="15"
-      strokeMiterlimit="3.86874"
-      strokeLinecap="round"
-    />
-  );
-};
-
 const words = ["announcements", "data entries", "fee updates", "contests", "attendance", "progress reports", "applications", "the repetitive"];
 
 function Tooltip() {
@@ -71,9 +58,20 @@ function Navbar({ className }: { className?: string }) {
     <div className={cn("fixed top-10 inset-x-0 max-w-fit mx-auto z-50", className)}>
       <Menu setActive={setActive}>
 
-        <EmptyMenuItem setActive={setActive} active={active} item="Home"></EmptyMenuItem>
+        <Image
+          src="/zvia_white.png"
+          alt="ZVIA"
+          height={70}
+          width={70}
+        />
 
-        <EmptyMenuItem setActive={setActive} active={active} item="About"></EmptyMenuItem>
+        <a href="#home">
+          <EmptyMenuItem setActive={setActive} active={active} item="Home"></EmptyMenuItem>
+        </a>
+
+        <a href="#about">
+          <EmptyMenuItem setActive={setActive} active={active} item="About"></EmptyMenuItem>
+        </a>
 
         <MenuItem setActive={setActive} active={active} item="Products">
           <div className=" text-sm grid grid-cols-1 gap-10 p-4">
@@ -94,7 +92,7 @@ function Navbar({ className }: { className?: string }) {
           <Tooltip />
         </MenuItem>
       </Menu>
-    </div>
+    </div >
   );
 };
 
@@ -105,12 +103,12 @@ export default function Home() {
         <Navbar className="top-2" />
       </div>
 
-      <div className="h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center">
+      <div className="h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center" id="home">
         <div className="flex flex-row">
 
-          <Image height={575} width={775} src="/leftsidemockup.png" alt="phone" className="absolute left-[200px] top-12" />
+          <Image height={575} width={775} src="/leftsidemockup.png" alt="phone" className="absolute left-[200px] top-8" />
 
-          <div className="fixed w-full flex flex-col justify-center font-semibold items-center top-[400px] px-4">
+          <div className="absolute max-w-screen-lg flex flex-col justify-center font-semibold items-center top-[400px] left-[1800px] px-4">
             <h1 className="text-8xl ml-[-1000px]">Automate</h1>
             <div className="text-8xl ml-[-1000px]">
               <FlipWords words={words} />
@@ -119,11 +117,21 @@ export default function Home() {
             <div className="ml-[-1000px] mt-10">
               <EvervaultCard text="More" />
             </div>
-
           </div>
           <BackgroundBeams />
         </div>
+      </div>
 
+      <div className="w-full h-screen rounded-md bg-neutral-950 relative flex flex-col items-center justify-center" id="about">
+        <h1 className="text-6xl font-bold mb-20">
+          About Us
+        </h1>
+
+        <p className="text-3xl text-center">
+          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+        </p>
+
+        <BackgroundBeams />
       </div>
     </>
   );
