@@ -94,13 +94,87 @@ function Navbar({ className }: { className?: string }) {
   );
 }
 
+const products = [
+  {
+    title: "zClass",
+    link: "/zclass",
+    thumbnail: "/zvia_white.png"
+  }, {
+    title: "zClass",
+    link: "/zclass",
+    thumbnail: "/zvia_white.png"
+  }, {
+    title: "zClass",
+    link: "/zclass",
+    thumbnail: "/z_white.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/phone4.png"
+  },
+  {
+    title: "zClass",
+    link: "/zclass",
+    thumbnail: "/phone4.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/z_white.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/z_white.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/phone4.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/phone4.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/phone4.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/z_white.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/z_white.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/z_white.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/phone4.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/phone4.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/phone4.png"
+  }, {
+    title: "zClass",
+    link: "/zClass",
+    thumbnail: "/phone4.png"
+  },
+];
+
 export default function Home() {
   return (
     <>
-
       <div className="relative w-full">
         <Navbar className="top-2" />
       </div>
+
+      <HeroParallax products={products} />
 
     </>
   );

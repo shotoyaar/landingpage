@@ -9,6 +9,10 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { TextGenerateEffect } from "./textGenerate";
+
+const words1 = "Filler text";
+const words2 = "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.";
 
 export const HeroParallax = ({
   products,
@@ -103,15 +107,9 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The Ultimate <br /> development studio
-      </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
-      </p>
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-[150px]">
+      <TextGenerateEffect words={words1} className="font-bold text-9xl text-white font-serif" />
+      <TextGenerateEffect words={words2} className="max-w-2xl text-3xl mt-8 text-neutral-200 font-normal" />
     </div>
   );
 };
