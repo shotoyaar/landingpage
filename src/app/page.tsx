@@ -59,16 +59,14 @@ function Navbar({ className }: { className?: string }) {
     <div className={cn("fixed top-10 inset-x-0 max-w-fit mx-auto z-50", className)}>
       <Menu setActive={setActive}>
 
-        <Image
-          src="/zvia_white.png"
-          alt="ZVIA"
-          height={70}
-          width={70}
-        />
-
-        <a href="#home">
-          <EmptyMenuItem setActive={setActive} active={active} item="Home"></EmptyMenuItem>
-        </a>
+        <Link href="#home">
+          <Image
+            src="/zvia_white.png"
+            alt="ZVIA"
+            height={70}
+            width={70}
+          />
+        </Link>
 
         <a href="#about">
           <EmptyMenuItem setActive={setActive} active={active} item="About"></EmptyMenuItem>
@@ -115,7 +113,7 @@ export default function Home() {
               <FlipWords words={words} />
             </div>
             <Link href="/zclass">
-              <button className="px-8 py-2 border border-white relative group transition duration-200 bg-transparent mt-10 rounded-3xl">
+              <button className="px-8 py-2 border border-white relative group transition duration-200 bg-transparent mt-10 rounded-3xl z-10">
                 <div className="absolute -bottom-2 -right-2 bg-yellow-300 h-full w0full -z-1- group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
                 <span className="relative">Try zClass</span>
               </button>
