@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import { AnimatedHandles } from "../components/contact";
 import { BackgroundBeams } from "../components/backgroundBeams";
 import { FlipWords } from "../components/flipText";
-import { EvervaultCard } from "../components/borderG";
+import { ButtonsCard } from "@/components/tailwind-buttons";
 
 const people = [
   {
@@ -109,15 +109,17 @@ export default function Home() {
 
           <Image height={575} width={775} src="/leftsidemockup.png" alt="phone" className="absolute left-[200px] top-0" />
 
-          <div className="absolute max-w-screen-lg flex flex-col justify-center font-semibold items-center top-[400px] left-[1800px] px-4">
-            <h1 className="text-8xl ml-[-1000px]">Automate</h1>
-            <div className="text-8xl ml-[-1000px]">
+          <div className="relative max-w-screen-lg flex flex-col justify-center font-semibold items-center top-[20px] left-[400px] px-4">
+            <h1 className="relative text-[80px]">Automate</h1>
+            <div className="relative text-[80px]">
               <FlipWords words={words} />
             </div>
-
-            <div className="ml-[-1000px] mt-10">
-              <EvervaultCard text="More" />
-            </div>
+            <Link href="/zclass">
+              <button className="px-8 py-2 border border-white relative group transition duration-200 bg-transparent mt-10 rounded-3xl">
+                <div className="absolute -bottom-2 -right-2 bg-yellow-300 h-full w0full -z-1- group-hover:bottom-0 group-hover:right-0 transition-all duration-200" />
+                <span className="relative">Try zClass</span>
+              </button>
+            </Link>
           </div>
           <BackgroundBeams />
         </div>
@@ -136,4 +138,4 @@ export default function Home() {
       </div>
     </>
   );
-};
+}
