@@ -30,33 +30,33 @@ export const GoogleGeminiEffect = ({
           `Scroll this component and see the bottom SVG come to life wow this
         works!`}
       </p>
-      <div className="w-full h-[1020px] z-10 -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
+      <div className="w-full h-[1165px] left-10 z-10 -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
         <Image
           src="/gmail.png"
           alt="gmail"
-          height={70}
-          width={70}
+          height={80}
+          width={80}
           className="rounded-3xl mr-2"
         />
         <Image
           src="/sheets.png"
           alt="sheets"
-          height={70}
-          width={70}
+          height={80}
+          width={80}
           className="rounded-3xl mr-2"
         />
         <Image
           src="/whatsapp1.jpg"
           alt="whatsapp"
-          height={70}
-          width={70}
+          height={80}
+          width={80}
           className="rounded-3xl mr-2"
         />
         <Image
           src="/z_whitebg.png"
           alt="zvia"
-          height={70}
-          width={70}
+          height={80}
+          width={80}
           className="rounded-3xl"
         />
       </div>
