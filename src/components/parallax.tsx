@@ -108,7 +108,7 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-[150px]">
-      <TextGenerateEffect words={words1} className="font-bold text-9xl text-white font-serif" />
+      <TextGenerateEffect words={words1} className="font-bold text-9xl text-white" />
       <TextGenerateEffect words={words2} className="max-w-2xl text-3xl mt-8 text-neutral-200 font-normal" />
     </div>
   );

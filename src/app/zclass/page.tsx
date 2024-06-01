@@ -1,14 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { TextGenerateEffect } from "@/components/textGenerate";
 import { GoogleGeminiEffect } from "@/components/geminiScroll";
 import { HeroParallax } from "@/components/parallax";
-import { MaskContainer } from "@/components/mask";
 import { HoveredLink, EmptyMenuItem, Menu, MenuItem, ProductItem } from "@/components/navbar";
 import { AnimatedHandles } from "@/components/contact";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { cn } from "@/components/utils";
+import { useScroll, useTransform } from "framer-motion";
 
 const people = [
   {
@@ -167,6 +166,43 @@ const products = [
   },
 ];
 
+function GeminiEffect() {
+  const ref = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+
+  const title = "Filler Text";
+  const description = "Filler text";
+
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+
+  return (
+    <div className="h-[400vh] w-full bg-black w-full relative pt-40 overflow-clip"
+      ref={ref}
+    >
+      <GoogleGeminiEffect
+        pathLengths={[
+          pathLengthFirst,
+          pathLengthSecond,
+          pathLengthThird,
+          pathLengthFourth,
+          pathLengthFifth,
+        ]}
+        title={title}
+        description={description}
+      />
+    </div>
+  );
+}
+
+
 export default function Home() {
   return (
     <>
@@ -175,7 +211,7 @@ export default function Home() {
       </div>
 
       <HeroParallax products={products} />
-
+      <GeminiEffect />
     </>
   );
 }
