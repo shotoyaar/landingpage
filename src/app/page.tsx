@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { HoveredLink, EmptyMenuItem, Menu, MenuItem, ProductItem } from "../components/navbar";
 import { cn } from "../components/utils";
 import React, { useState } from 'react';
@@ -77,7 +78,7 @@ function Navbar({ className }: { className?: string }) {
           <div className=" text-sm grid grid-cols-1 gap-10 p-4">
             <ProductItem
               title="zClass"
-              href="https://algochurn.com"
+              href="/zclass"
               src="/phone4.png"
               description="Et tu, Brutus?"
             />
@@ -106,7 +107,7 @@ export default function Home() {
       <div className="h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center" id="home">
         <div className="flex flex-row">
 
-          <Image height={575} width={775} src="/leftsidemockup.png" alt="phone" className="absolute left-[200px] top-8" />
+          <Image height={575} width={775} src="/leftsidemockup.png" alt="phone" className="absolute left-[200px] top-0" />
 
           <div className="absolute max-w-screen-lg flex flex-col justify-center font-semibold items-center top-[400px] left-[1800px] px-4">
             <h1 className="text-8xl ml-[-1000px]">Automate</h1>
