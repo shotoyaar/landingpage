@@ -30,7 +30,7 @@ export const GoogleGeminiEffect = ({
           `Scroll this component and see the bottom SVG come to life wow this
         works!`}
       </p>
-      <div className="w-full h-[1165px] left-10 z-10 -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
+      <div className="w-full h-[1165px] left-8 z-10 -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
         <Image
           src="/gmail.png"
           alt="gmail"
