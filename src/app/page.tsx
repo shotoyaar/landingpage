@@ -124,7 +124,7 @@ export default function Home() {
 
       <div className="w-full h-screen rounded-md bg-neutral-950 relative flex flex-col items-center justify-center" id="about">
         <h1 className="text-6xl font-bold mb-20">
-          About Us
+          About
         </h1>
 
         <p className="text-3xl text-center">
