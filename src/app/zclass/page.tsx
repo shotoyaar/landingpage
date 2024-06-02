@@ -45,7 +45,7 @@ const people = [
 
 function Tooltip() {
   return (
-    <div className="flex flex-row items-center justify-center mt-20 mb-10 mr-48 w-full">
+    <div className="flex flex-row items-center justify-center mt-20 mb-10 mr-48 md:mr-0 w-full">
       <AnimatedHandles items={people} />
     </div>
   );
@@ -54,7 +54,7 @@ function Tooltip() {
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div className={cn("fixed top-10 inset-x-0 max-w-fit mx-auto z-50", className)}>
+    <div className={cn("fixed top-10 inset-x-0 max-w-fit mx-auto z-50 px-4 md:px-0", className)}>
       <Menu setActive={setActive}>
 
         <Link href="/#home">
@@ -184,7 +184,7 @@ function GeminiEffect() {
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
 
   return (
-    <div className="h-[400vh] w-full bg-black w-full relative pt-40 overflow-clip"
+    <div className="h-[400vh] w-full bg-black relative pt-40 overflow-clip"
       ref={ref}
     >
       <GoogleGeminiEffect
@@ -205,13 +205,13 @@ function GeminiEffect() {
 
 export default function Home() {
   return (
-    <>
-      <div className="relative w-full">
+    <div className="w-full min-h-screen">
+      <div className="relative">
         <Navbar className="top-2" />
       </div>
 
       <HeroParallax products={products} />
       <GeminiEffect />
-    </>
+    </div>
   );
 }

@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import { AnimatedHandles } from "../components/contact";
 import { BackgroundBeams } from "../components/backgroundBeams";
 import { FlipWords } from "../components/flipText";
-import { ButtonsCard } from "@/components/tailwind-buttons";
 
 const people = [
   {
@@ -103,13 +102,12 @@ export default function Home() {
       </div>
 
       <div className="h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center" id="home">
-        <div className="flex flex-row">
+        <div className="flex flex-row flex-wrap justify-center items-center">
+          <Image height={575} width={775} src="/leftsidemockup.png" alt="phone" className="max-w-full mx-auto md:absolute md:left-[200px] md:top-0" />
 
-          <Image height={575} width={775} src="/leftsidemockup.png" alt="phone" className="absolute left-[200px] top-0" />
-
-          <div className="relative max-w-screen-lg flex flex-col justify-center font-semibold items-center top-[20px] left-[400px] px-4">
-            <h1 className="relative text-[80px]">Automate</h1>
-            <div className="relative text-[80px]">
+          <div className="relative max-w-screen-lg flex flex-col justify-center font-semibold items-center px-4 md:top-[20px] md:left-[400px]">
+            <h1 className="relative text-[80px] md:text-[80px] sm:text-[60px] xs:text-[40px]">Automate</h1>
+            <div className="relative text-[80px] md:text-[80px] sm:text-[60px] xs:text-[40px]">
               <FlipWords words={words} />
             </div>
             <Link href="/zclass">
@@ -128,7 +126,7 @@ export default function Home() {
           About
         </h1>
 
-        <p className="text-3xl text-center px-[220px]">
+        <p className="text-3xl text-center px-4 md:px-[220px]">
           Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
         </p>
 
